@@ -21,7 +21,7 @@
 
 .container {
     background-color: #fff;
-    padding: 40px;
+    padding: 20px; /* Reducir padding para móviles */
     border-radius: 20px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     max-width: 550px;
@@ -33,25 +33,25 @@
 }
 
 .cat-container {
-    margin-bottom: 30px;
-    min-height: 200px; /* Para mantener un espacio fijo para la animación */
+    margin-bottom: 20px; /* Reducir margen para móviles */
+    min-height: 180px; /* Ajustar altura mínima para la animación */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #cat-animation {
-    width: 250px; /* Tamaño generoso para la animación */
+    width: 200px; /* Reducir tamaño de la animación para móviles */
     height: auto;
-    transition: transform 0.5s ease-in-out; /* Transición suave para cualquier cambio */
+    transition: transform 0.5s ease-in-out;
 }
 
 #question {
-    font-size: 1.4em;
-    color: #e91e63; /* Un rosa vibrante para la pregunta */
-    margin-bottom: 30px;
+    font-size: 1.2em; /* Reducir tamaño de fuente para móviles */
+    color: #e91e63;
+    margin-bottom: 25px; /* Reducir margen para móviles */
     font-weight: bold;
-    animation: fadeInQuestion 0.8s ease-out; /* Animación para la pregunta */
+    animation: fadeInQuestion 0.8s ease-out;
 }
 
 @keyframes fadeInQuestion {
@@ -59,29 +59,31 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-
 .button-group {
     display: flex;
-    justify-content: center;
-    gap: 20px; /* Espacio entre botones */
-    margin-bottom: 30px;
+    flex-direction: column; /* Apilar botones en pantallas pequeñas */
+    gap: 15px; /* Espacio entre botones apilados */
+    margin-bottom: 25px; /* Reducir margen para móviles */
 }
 
 .main-button {
-    background-color: #ff7043; /* Naranja rojizo */
+    background-color: #ff7043;
     color: white;
     border: none;
-    padding: 15px 30px;
+    padding: 12px 25px; /* Ajustar padding de botones */
     border-radius: 10px;
     cursor: pointer;
-    font-size: 1.2em;
+    font-size: 1.1em; /* Ajustar tamaño de fuente de botones */
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Que ocupen todo el ancho disponible */
+    max-width: 250px; /* Limitar el ancho máximo para que no se estiren demasiado */
+    margin: 0 auto; /* Centrar los botones apilados */
 }
 
 #yes-btn {
-    background-color: #66bb6a; /* Verde para el "sí" */
+    background-color: #66bb6a;
 }
 
 #yes-btn:hover {
@@ -90,7 +92,7 @@
 }
 
 #no-btn {
-    background-color: #ef5350; /* Rojo para el "no" */
+    background-color: #ef5350;
 }
 
 #no-btn:hover {
@@ -110,28 +112,28 @@
 }
 
 #final-message {
-    margin-top: 40px;
-    padding: 30px;
-    background-color: #e8f5e9; /* Verde muy claro */
-    border: 2px solid #a5d6a7; /* Borde verde suave */
+    margin-top: 30px; /* Reducir margen superior */
+    padding: 25px; /* Ajustar padding */
+    background-color: #e8f5e9;
+    border: 2px solid #a5d6a7;
     border-radius: 15px;
-    color: #388e3c; /* Texto verde oscuro */
-    font-size: 1.3em;
-    line-height: 1.7;
+    color: #388e3c;
+    font-size: 1.1em; /* Ajustar tamaño de fuente */
+    line-height: 1.6; /* Ajustar interlineado */
     animation: fadeIn 1s forwards;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 #final-message p {
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Ajustar margen inferior de párrafos */
 }
 
 .firma {
-    margin-top: 25px;
+    margin-top: 20px; /* Ajustar margen superior */
     font-style: italic;
     font-weight: bold;
     color: #555;
-    font-size: 1.1em;
+    font-size: 1em; /* Ajustar tamaño de fuente */
 }
 
 @keyframes fadeIn {
@@ -140,14 +142,14 @@
 }
 
 #restart-btn {
-    background-color: #ffb74d; /* Naranja suave */
+    background-color: #ffb74d;
     color: white;
     border: none;
-    padding: 12px 25px;
+    padding: 10px 20px; /* Ajustar padding */
     border-radius: 8px;
     cursor: pointer;
-    font-size: 1.1em;
-    margin-top: 30px;
+    font-size: 1em; /* Ajustar tamaño de fuente */
+    margin-top: 25px; /* Ajustar margen superior */
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -157,13 +159,84 @@
     transform: translateY(-2px);
 }
 
-/* Opcional: animaciones para los botones al desaparecer */
 .fade-out-buttons {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
-    </style>
+
+/* --- Media Queries --- */
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Más reducción de padding en pantallas muy pequeñas */
+        width: 95%; /* Ocupar más ancho disponible */
+    }
+
+    .cat-container {
+        min-height: 150px; /* Ajustar altura mínima aún más */
+    }
+
+    #cat-animation {
+        width: 180px; /* Reducir el tamaño de la animación en pantallas muy pequeñas */
+    }
+
+    #question {
+        font-size: 1.1em; /* Tamaño de fuente más pequeño para la pregunta */
+    }
+
+    .button-group {
+        gap: 10px; /* Reducir espacio entre botones apilados */
+    }
+
+    .main-button {
+        padding: 10px 20px; /* Ajustar padding de botones */
+        font-size: 1em; /* Ajustar tamaño de fuente de botones */
+    }
+
+    #final-message {
+        padding: 20px; /* Reducir padding del mensaje final */
+        font-size: 1em; /* Ajustar tamaño de fuente del mensaje final */
+    }
+
+    .firma {
+        font-size: 0.9em; /* Ajustar tamaño de fuente de la firma */
+    }
+
+    #restart-btn {
+        padding: 8px 18px; /* Ajustar padding del botón de reiniciar */
+        font-size: 0.9em; /* Ajustar tamaño de fuente del botón de reiniciar */
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        border-radius: 15px; /* Bordes ligeramente menos redondeados en pantallas muy pequeñas */
+    }
+
+    #cat-animation {
+        width: 150px; /* Ajuste final para el tamaño de la animación */
+    }
+
+    #question {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+    
+    .button-group {
+        margin-bottom: 20px;
+    }
+
+    .main-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    #final-message {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+}</style>
 </head>
 <body>
     <div class="container">
