@@ -21,35 +21,35 @@
 
 .container {
     background-color: #fff;
-    padding: 20px; /* Reducir padding para móviles */
-    border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-    max-width: 550px;
-    width: 90%;
-    margin: 20px auto;
-    border: 3px solid #ffab91; /* Un tono naranja/rosa suave */
+    padding: 15px; /* Reducido para pantallas muy pequeñas */
+    border-radius: 15px; /* Bordes ligeramente menos redondeados */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    max-width: 500px; /* Ancho máximo un poco más pequeño */
+    width: 95%; /* Ocupa más ancho disponible en móviles */
+    margin: 15px auto; /* Margen ligeramente más pequeño */
+    border: 2px solid #ffab91; /* Borde más delgado */
     position: relative;
     overflow: hidden;
 }
 
 .cat-container {
-    margin-bottom: 20px; /* Reducir margen para móviles */
-    min-height: 180px; /* Ajustar altura mínima para la animación */
+    margin-bottom: 15px; /* Margen inferior más pequeño */
+    min-height: 120px; /* Altura mínima ajustada para la animación */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #cat-animation {
-    width: 200px; /* Reducir tamaño de la animación para móviles */
+    width: 150px; /* Tamaño más pequeño para la animación */
     height: auto;
     transition: transform 0.5s ease-in-out;
 }
 
 #question {
-    font-size: 1.2em; /* Reducir tamaño de fuente para móviles */
+    font-size: 1em; /* Tamaño de fuente más pequeño para la pregunta */
     color: #e91e63;
-    margin-bottom: 25px; /* Reducir margen para móviles */
+    margin-bottom: 20px; /* Margen inferior ajustado */
     font-weight: bold;
     animation: fadeInQuestion 0.8s ease-out;
 }
@@ -61,24 +61,24 @@
 
 .button-group {
     display: flex;
-    flex-direction: column; /* Apilar botones en pantallas pequeñas */
-    gap: 15px; /* Espacio entre botones apilados */
-    margin-bottom: 25px; /* Reducir margen para móviles */
+    flex-direction: column; /* Apilar botones */
+    gap: 10px; /* Espacio más pequeño entre botones apilados */
+    margin-bottom: 20px; /* Margen inferior ajustado */
 }
 
 .main-button {
     background-color: #ff7043;
     color: white;
     border: none;
-    padding: 12px 25px; /* Ajustar padding de botones */
-    border-radius: 10px;
+    padding: 10px 20px; /* Padding reducido para botones */
+    border-radius: 8px; /* Bordes ligeramente menos redondeados */
     cursor: pointer;
-    font-size: 1.1em; /* Ajustar tamaño de fuente de botones */
+    font-size: 0.9em; /* Tamaño de fuente más pequeño para botones */
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Que ocupen todo el ancho disponible */
-    max-width: 250px; /* Limitar el ancho máximo para que no se estiren demasiado */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    width: 100%; /* Ocupar todo el ancho disponible */
+    max-width: 200px; /* Limitar el ancho máximo para botones apilados */
     margin: 0 auto; /* Centrar los botones apilados */
 }
 
@@ -88,7 +88,7 @@
 
 #yes-btn:hover {
     background-color: #4CAF50;
-    transform: translateY(-3px);
+    transform: translateY(-2px); /* Efecto hover más sutil */
 }
 
 #no-btn {
@@ -97,7 +97,7 @@
 
 #no-btn:hover {
     background-color: #d32f2f;
-    transform: translateY(-3px);
+    transform: translateY(-2px); /* Efecto hover más sutil */
 }
 
 .hidden {
@@ -112,28 +112,28 @@
 }
 
 #final-message {
-    margin-top: 30px; /* Reducir margen superior */
-    padding: 25px; /* Ajustar padding */
+    margin-top: 25px; /* Margen superior ajustado */
+    padding: 20px; /* Padding reducido */
     background-color: #e8f5e9;
-    border: 2px solid #a5d6a7;
-    border-radius: 15px;
+    border: 1px solid #a5d6a7; /* Borde más delgado */
+    border-radius: 10px; /* Bordes menos redondeados */
     color: #388e3c;
-    font-size: 1.1em; /* Ajustar tamaño de fuente */
-    line-height: 1.6; /* Ajustar interlineado */
+    font-size: 1em; /* Tamaño de fuente ajustado */
+    line-height: 1.5; /* Interlineado más compacto */
     animation: fadeIn 1s forwards;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra más suave */
 }
 
 #final-message p {
-    margin-bottom: 15px; /* Ajustar margen inferior de párrafos */
+    margin-bottom: 10px; /* Margen inferior de párrafos más pequeño */
 }
 
 .firma {
-    margin-top: 20px; /* Ajustar margen superior */
+    margin-top: 15px; /* Margen superior ajustado */
     font-style: italic;
     font-weight: bold;
     color: #555;
-    font-size: 1em; /* Ajustar tamaño de fuente */
+    font-size: 0.9em; /* Tamaño de fuente más pequeño para la firma */
 }
 
 @keyframes fadeIn {
@@ -145,18 +145,18 @@
     background-color: #ffb74d;
     color: white;
     border: none;
-    padding: 10px 20px; /* Ajustar padding */
-    border-radius: 8px;
+    padding: 8px 18px; /* Padding reducido */
+    border-radius: 6px; /* Bordes menos redondeados */
     cursor: pointer;
-    font-size: 1em; /* Ajustar tamaño de fuente */
-    margin-top: 25px; /* Ajustar margen superior */
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+    margin-top: 20px; /* Margen superior ajustado */
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra más suave */
 }
 
 #restart-btn:hover {
     background-color: #ffa726;
-    transform: translateY(-2px);
+    transform: translateY(-1px); /* Efecto hover más sutil */
 }
 
 .fade-out-buttons {
@@ -165,78 +165,88 @@
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* --- Media Queries --- */
+/* --- Media Queries para ajustes aún más finos --- */
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .container {
-        padding: 15px; /* Más reducción de padding en pantallas muy pequeñas */
-        width: 95%; /* Ocupar más ancho disponible */
+        padding: 10px; /* Más reducción para celulares pequeños */
+        margin: 10px auto;
     }
 
     .cat-container {
-        min-height: 150px; /* Ajustar altura mínima aún más */
+        min-height: 100px; /* Altura mínima para la animación en celulares muy pequeños */
+        margin-bottom: 10px;
     }
 
     #cat-animation {
-        width: 180px; /* Reducir el tamaño de la animación en pantallas muy pequeñas */
+        width: 120px; /* Tamaño de la animación más pequeño aún */
     }
 
     #question {
-        font-size: 1.1em; /* Tamaño de fuente más pequeño para la pregunta */
+        font-size: 0.95em; /* Ajuste final para la pregunta */
+        margin-bottom: 15px;
     }
 
     .button-group {
-        gap: 10px; /* Reducir espacio entre botones apilados */
-    }
-
-    .main-button {
-        padding: 10px 20px; /* Ajustar padding de botones */
-        font-size: 1em; /* Ajustar tamaño de fuente de botones */
-    }
-
-    #final-message {
-        padding: 20px; /* Reducir padding del mensaje final */
-        font-size: 1em; /* Ajustar tamaño de fuente del mensaje final */
-    }
-
-    .firma {
-        font-size: 0.9em; /* Ajustar tamaño de fuente de la firma */
-    }
-
-    #restart-btn {
-        padding: 8px 18px; /* Ajustar padding del botón de reiniciar */
-        font-size: 0.9em; /* Ajustar tamaño de fuente del botón de reiniciar */
-    }
-}
-
-@media (max-width: 400px) {
-    .container {
-        border-radius: 15px; /* Bordes ligeramente menos redondeados en pantallas muy pequeñas */
-    }
-
-    #cat-animation {
-        width: 150px; /* Ajuste final para el tamaño de la animación */
-    }
-
-    #question {
-        font-size: 1em;
-        margin-bottom: 20px;
-    }
-    
-    .button-group {
-        margin-bottom: 20px;
+        gap: 8px; /* Espacio mínimo entre botones */
+        margin-bottom: 15px;
     }
 
     .main-button {
         padding: 8px 15px;
-        font-size: 0.9em;
+        font-size: 0.85em; /* Tamaño de fuente más pequeño para botones */
+        max-width: 180px; /* Limitar el ancho máximo aún más */
     }
 
     #final-message {
         padding: 15px;
-        font-size: 0.9em;
+        font-size: 0.9em; /* Ajuste para el mensaje final */
+        line-height: 1.4;
     }
-}</style>
+
+    #final-message p {
+        margin-bottom: 8px;
+    }
+
+    .firma {
+        font-size: 0.8em; /* Firma más pequeña */
+        margin-top: 10px;
+    }
+
+    #restart-btn {
+        padding: 7px 15px;
+        font-size: 0.85em;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 380px) {
+    #cat-animation {
+        width: 100px; /* Tamaño mínimo para la animación en los celulares más pequeños */
+    }
+
+    #question {
+        font-size: 0.9em; /* Asegurar legibilidad en pantallas muy estrechas */
+    }
+
+    .main-button {
+        font-size: 0.8em; /* Asegurar que los botones quepan */
+        padding: 7px 12px;
+    }
+
+    #final-message {
+        font-size: 0.85em;
+    }
+
+    .firma {
+        font-size: 0.75em;
+    }
+
+    #restart-btn {
+        font-size: 0.8em;
+    }
+}
+    </style>
 </head>
 <body>
     <div class="container">
