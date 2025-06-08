@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatito Arrepentido ❤️</title>
+    <link rel="icon" href="https://images.emojiterra.com/google/noto-emoji/animated-emoji/1f63a.gif" type="image/gif"> 
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #fce4ec; /* Un rosado muy suave */
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    max-width: 550px;
+    width: 90%;
+    margin: 20px auto;
+    border: 3px solid #ffab91; /* Un tono naranja/rosa suave */
+    position: relative;
+    overflow: hidden;
+}
+
+.cat-container {
+    margin-bottom: 30px;
+    min-height: 200px; /* Para mantener un espacio fijo para la animación */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cat-animation {
+    width: 250px; /* Tamaño generoso para la animación */
+    height: auto;
+    transition: transform 0.5s ease-in-out; /* Transición suave para cualquier cambio */
+}
+
+#question {
+    font-size: 1.4em;
+    color: #e91e63; /* Un rosa vibrante para la pregunta */
+    margin-bottom: 30px;
+    font-weight: bold;
+    animation: fadeInQuestion 0.8s ease-out; /* Animación para la pregunta */
+}
+
+@keyframes fadeInQuestion {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre botones */
+    margin-bottom: 30px;
+}
+
+.main-button {
+    background-color: #ff7043; /* Naranja rojizo */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#yes-btn {
+    background-color: #66bb6a; /* Verde para el "sí" */
+}
+
+#yes-btn:hover {
+    background-color: #4CAF50;
+    transform: translateY(-3px);
+}
+
+#no-btn {
+    background-color: #ef5350; /* Rojo para el "no" */
+}
+
+#no-btn:hover {
+    background-color: #d32f2f;
+    transform: translateY(-3px);
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+}
+
+#final-message {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #e8f5e9; /* Verde muy claro */
+    border: 2px solid #a5d6a7; /* Borde verde suave */
+    border-radius: 15px;
+    color: #388e3c; /* Texto verde oscuro */
+    font-size: 1.3em;
+    line-height: 1.7;
+    animation: fadeIn 1s forwards;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#final-message p {
+    margin-bottom: 20px;
+}
+
+.firma {
+    margin-top: 25px;
+    font-style: italic;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1em;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#restart-btn {
+    background-color: #ffb74d; /* Naranja suave */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#restart-btn:hover {
+    background-color: #ffa726;
+    transform: translateY(-2px);
+}
+
+/* Opcional: animaciones para los botones al desaparecer */
+.fade-out-buttons {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cat-container">
+            <img src="https://images.emojiterra.com/google/noto-emoji/animated-emoji/1f63a.gif" alt="Emoji de gato arrepentido" id="cat-animation">
+        </div>
+
+        <div id="interaction-area">
+            <p id="question">Wenas wenas... No crees que el gato necesita ser perdonado</p>
+            <div class="button-group">
+                <button id="yes-btn" class="main-button">Sí, te perdono</button>
+                <button id="no-btn" class="main-button">No, aún no</button>
+            </div>
+        </div>
+
+        <div id="final-message" class="hidden">
+            <p>¡Graciaaaaaasssss! El gatito sabe que ya no bromeara de esa manera ok. </p>
+            <p>Este gatito representa lo mucho que te valoramos y lo arrepentido q estamos. Eres una persona increíble y no sabes cuánto aprecio cada momento contigo. Asi que agradecemos que nos perdones por no saber controlar nuestras bromas siiiiii, ¡Graciaaaaaaaaaaasssssss!</p>
+            <p class="firma">Con todo mi arrepentimiento, <br> El señor carteto</p>
+        </div>
+
+        <button id="restart-btn" class="hidden">Ver de nuevo</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const catAnimation = document.getElementById('cat-animation');
+    const questionElement = document.getElementById('question');
+    const yesBtn = document.getElementById('yes-btn');
+    const noBtn = document.getElementById('no-btn');
+    const interactionArea = document.getElementById('interaction-area');
+    const finalMessage = document.getElementById('final-message');
+    const restartBtn = document.getElementById('restart-btn');
+
+    // Define las rutas de tus animaciones/imágenes de gato
+    // ¡Asegúrate de que estos nombres de archivo coincidan con los que guardaste!
+    const catStates = {
+        arrepentido: 'https://images.emojiterra.com/google/noto-emoji/animated-emoji/1f63f.gif',
+        muy_triste: 'https://images.emojiterra.com/google/noto-emoji/animated-emoji/1f63f.gif', // Opcional, para múltiples "no"
+        esperanzado: 'https://images.emojiterra.com/google/noto-emoji/animated-emoji/1f63a.gif',
+        contento: 'https://images.emojiterra.com/google/noto-emoji/animated-emoji/1f63a.gif',
+        feliz: 'https://images.emojiterra.com/google/noto-emoji/animated-emoji/1f638.gif'
+    };
+
+    // Preguntas para cada vez que diga "no"
+    const noQuestions = [
+        "Mira al gatito... No crees q merece una oportunidad",
+        "El gatito te está mirando con esos ojitos... ¿No te da pena?",
+        "El gatito ha aprendido de sus errores... ¿No crees que merece una segunda oportunidad?",
+        "El gatito te lo está pidiendo con todo su corazón... ¿No crees que deberías decir que sí?",
+        "El gatito ha bajado las orejitas... ¿De verdad no le darás una segunda oportunidad?",
+        "El gatito ya no sabe qué hacer para que lo perdones...",
+        "El gatito te lo pide con todo su corazón... ¿No crees que deberías decir que sí?",
+        "Entiendo que el gatito se equivocó... Pero ¿No ves su lagrimita cayendo?",
+        "No se va a volver a repetir... Yaaaaaaa xfa",
+        "La última, el gatito te lo pide xfavor siiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii",
+    ];
+    let noCount = 0; // Contador de veces que ha dicho "no"
+    const maxNoAttempts = noQuestions.length; // Cuántas preguntas de "no" tenemos
+
+    // --- Funciones para cambiar el estado del gato y la interfaz ---
+
+    function changeCatState(stateName) {
+        catAnimation.src = catStates[stateName];
+        catAnimation.style.transform = 'scale(1)'; // Resetear cualquier transformación
+        void catAnimation.offsetWidth; // Truco para reiniciar la animación de un GIF
+    }
+
+    function showFinalMessage() {
+        interactionArea.classList.add('fade-out-buttons'); // Añade la clase para el fade-out
+        setTimeout(() => {
+            interactionArea.classList.add('hidden');
+            interactionArea.classList.remove('fade-out-buttons');
+            finalMessage.classList.remove('hidden');
+            finalMessage.classList.add('visible');
+            restartBtn.classList.remove('hidden');
+            restartBtn.classList.add('visible');
+        }, 500); // Espera a que termine la animación de fade-out
+    }
+
+    // --- Event Listeners ---
+
+    yesBtn.addEventListener('click', () => {
+        // Secuencia de felicidad
+        changeCatState('esperanzado');
+        setTimeout(() => {
+            changeCatState('contento');
+        }, 800); // 0.8 segundos después
+        setTimeout(() => {
+            changeCatState('feliz');
+            showFinalMessage(); // Mostrar el mensaje final cuando el gato está muy feliz
+        }, 1600); // 1.6 segundos después
+    });
+
+    noBtn.addEventListener('click', () => {
+        noCount++;
+        if (noCount <= maxNoAttempts) {
+            questionElement.textContent = noQuestions[noCount - 1]; // Actualiza la pregunta
+            questionElement.style.animation = 'none'; // Quitar animación anterior
+            void questionElement.offsetWidth; // Truco para reiniciar animación
+            questionElement.style.animation = 'fadeInQuestion 0.8s ease-out'; // Aplicar nueva animación
+
+            if (noCount === maxNoAttempts) {
+                // Último "no" intentado, el gato se pone muy triste
+                changeCatState('muy_triste');
+                // Podrías cambiar el texto del botón "No" a algo como "Por favor, di sí..."
+                noBtn.textContent = "😔 Xfavor, di q sí...";
+                noBtn.style.backgroundColor = '#9e9e9e'; // Un color más apagado
+                // Si quieres que el "No" eventualmente lleve al "Sí" sin opción
+                // setTimeout(() => { yesBtn.click(); }, 3000); // Forzar el sí después de 3 segundos
+            } else {
+                changeCatState('arrepentido'); // Mantener el estado de arrepentido o un poco más triste si tienes uno intermedio
+            }
+        } else {
+            // Si ya se excedió el número de "no"s, puedes hacer algo más drástico
+            // Por ejemplo, que el gato se quede en el estado más triste indefinidamente
+            // O que aparezca un mensaje diferente.
+            console.log("Ya no hay más preguntas para el 'no'. El gatito está muy desanimado.");
+            // Opcional: Desactivar el botón "No"
+            // noBtn.disabled = true;
+            // noBtn.style.cursor = 'default';
+        }
+    });
+
+    restartBtn.addEventListener('click', () => {
+        location.reload(); // La forma más sencilla de reiniciar
+    });
+
+    // Estado inicial del gato
+    changeCatState('arrepentido');
+});
+    </script>
+</body>
+</html>
